@@ -2,6 +2,8 @@ import * as Web3 from "web3";
 import React, { useState } from "react";
 import NetworkSelectorMatic from "../components/NetworkSelector-matic";
 import BannerToast from "../components/NotificationBanner";
+import maticLogo from '../public/matic.svg';
+import Image from "next/image";
 
 const Matic = () => {
   const [userInput, setUserInput] = useState("");
@@ -66,8 +68,11 @@ const Matic = () => {
   return (
     <>
       <div className="root-matic font-space">
-        <div className="flex w-full p-4">
-          <div className="flex-1 text-gray-600 hover:text-gray-500">Matic</div>
+        <div className="header-wrapper flex w-full p-4">
+          {/* <div className="flex-1 text-gray-600 hover:text-gray-500">Matic</div> */}
+          <div className="grow">
+            <Image alt="tz" src={maticLogo} height={30} width={30} />
+          </div>
           <div className="flex-1 text-right ">
             <NetworkSelectorMatic
               selectedNetwork={selectedNetwork}
@@ -79,7 +84,7 @@ const Matic = () => {
           <div className="text-center mt-56 ">
             <div>
               <div className="text-6xl font-extrabold text-gray-200">
-                <h1>dekode.</h1>
+                <h1>Dekode.</h1>
               </div>
               <div className="text-xl text-gray-400">
                 <h2>decode any smart contract to understand better</h2>
@@ -116,7 +121,7 @@ const Matic = () => {
               <div className="text-center">
                 <div className="text-6xl font-extrabold text-gray-200">
                   <h1>
-                    dekode<a>.</a>
+                    Dekode<a>.</a>
                   </h1>
                 </div>
                 <div className="text-xl text-gray-400">
