@@ -1,11 +1,12 @@
 import * as Web3 from "web3";
 import React, { useState } from "react";
-import NetworkSelectorMatic from "../components/NetworkSelector-matic";
+import NetworkSelector from "../components/NetworkSelector";
 import BannerToast from "../components/NotificationBanner";
 import maticLogo from '../public/matic.svg';
 import Image from "next/image";
+import tezosLogo from "../public/tezos.svg"
 
-const Matic = () => {
+const Tez = () => {
   const [userInput, setUserInput] = useState("");
   const onUserChangedText = (event) => {
     setUserInput(event.target.value);
@@ -70,11 +71,11 @@ const Matic = () => {
       <div className="root-matic font-space">
         <div className="header-wrapper flex w-full p-4">
           {/* <div className="flex-1 text-gray-600 hover:text-gray-500">Matic</div> */}
-          <div className="grow">
-            <Image alt="tz" src={maticLogo} height={30} width={30} />
+          <div className="cursor-pointer">
+            <Image alt="tz" src={tezosLogo} height={30} width={30} />
           </div>
           <div className="flex-1 text-right ">
-            <NetworkSelectorMatic
+            <NetworkSelector
               selectedNetwork={selectedNetwork}
               setSelectedNetwork={setSelectedNetwork}
             />
@@ -84,7 +85,7 @@ const Matic = () => {
           <div className="text-center mt-56 ">
             <div>
               <div className="text-6xl font-extrabold text-gray-200">
-                <h1>Dekode.</h1>
+                <h1>KeyBrief</h1>
               </div>
               <div className="text-xl text-gray-400">
                 <h2>decode any smart contract to understand better</h2>
@@ -97,7 +98,7 @@ const Matic = () => {
                     type="text"
                     value={userInput}
                     onChange={onUserChangedText}
-                    placeholder="enter the contract address"
+                    placeholder="Enter contract address here"
                     className="p-3 mr-1 border-solid rounded-[10px] hover:border-gray-600 focus:border-gray-600 outline-none text-gray-200 border-gray-800 border-2 bg-gray-900 items-start leading-1  w-[250px] lg:w-[500px] md:w-[500px] xl:w-[500px]"
                   />
                   <button
@@ -121,7 +122,7 @@ const Matic = () => {
               <div className="text-center">
                 <div className="text-6xl font-extrabold text-gray-200">
                   <h1>
-                    Dekode<a>.</a>
+                    KeyBrief<a></a>
                   </h1>
                 </div>
                 <div className="text-xl text-gray-400">
@@ -135,7 +136,7 @@ const Matic = () => {
                       type="text"
                       value={userInput}
                       onChange={onUserChangedText}
-                      placeholder="enter the contract address"
+                      placeholder="Enter contract address here"
                       className="p-3 mr-1 border-solid rounded-[10px] hover:border-gray-600 focus:border-gray-600 outline-none text-gray-200 border-gray-800 border-2 bg-gray-900 items-start leading-1  w-[250px] lg:w-[500px] md:w-[500px] xl:w-[500px]"
                     />
                     <button
@@ -169,4 +170,4 @@ const Matic = () => {
   );
 };
 
-export default Matic;
+export default Tez;

@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }) {
           property="og:description"
           content="decode any smart contract to understand better"
         />
-        <meta property="og:title" content="dekode" />
+        <meta property="og:title" content="Keybrief" />
         <meta property="og:url" content="https://www.dekodeapp.xyz/" />
       </Head>
       <ChakraProvider>
